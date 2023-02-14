@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Diretório de Livros</title>
+</head>
+
+<body class="auth-active">
+  <div id="auth-form-container"></div>
+
+
+
+  <div id="book-form-container" class="d-flex flex-wrap position-relative flex-column justify-content-center align-items-center w-75 m-auto mt-5 mb-5">
+    <h1 id="book-form-project-name" class="d-flex justify-content-center align-items-center">
+      Biblioteca Amazon
+    </h1>
+
+    <h1 id="book-form-title" class="w-75 fs-3">
+      Nome do livro: <span class="text-warning fs-4 fst-italic"></span>
+    </h1>
+    <h1 id="book-form-price" class="w-75 fs-3">
+      Preço: <span class="text-warning fs-4 fst-italic"></span>
+    </h1>
+
+    <form id="book-form" class="d-flex w-75 flex-wrap flex-column align-items-center justify-content-center mt-3" type="POST">
+      <input type="text" name="cover" id="cover" hidden />
+      <input type="text" placeholder="Nome do livro" id="name" name="title" readonly hidden />
+      <input type="text" placeholder="Preço" id="price" name="price" readonly hidden />
+
+      <div class="input-group">
+        <input type="text" class="form-control fs-4" placeholder="Insira a URL do livro" id="book-url-input" name="url" aria-label="Recipient" />
+
+        <button id="book-add-btn" class="btn fw-normal fs-4" type="button">ADICIONAR</button>
+        <button id="book-cancel-btn" dataset-type="X" class="btn btn-danger btn-sm rounded fs-4 remove" type="button" data-toggle="tooltip" data-placement="top">
+          <i class="fa fa-x no-clickable"></i>
+        </button>
+      </div>
+
+      <input type="text" placeholder="Tag" id="tag" name="tag" value=" " hidden />
+
+      <label name="message-label" id="message-label" class="mt-4 fs-5" for="">
+        ( Formato do link deve ser: https://www.amazon.com.br/XXXXXXXXX )
+      </label>
+    </form>
+
+    <button id="book-update-prices" class="btn fw-normal fs-4" type="button">
+      Atualizar preços
+    </button>
+
+    <div class="loader">
+      <div></div>
+    </div>
+  </div>
+
+  <div id="logout-container">
+    <p>Olá, <span id="username"></span></p>
+    <button id="logout-btn" class="btn btn-danger btn-sm rounded">
+      <i class="fa-solid fa-right-from-bracket"></i>
+    </button>
+  </div>
+
+  <section id="books-container"></section>
+  <!-- 
+  <footer id="footer-container" class="centColumn">
+    <a id="title" href="https://github.com/thgomes1" target="_blank">
+      <p>Desenvolvido por Thiago Gomes - <i class="fab fa-github"></i> Github</p>
+    </a>
+    <p id="text">Visite meu GitHub e veja mais dos meus projetos: @thgomes1 =)</p>
+  </footer> -->
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="./js/main.js" type="module"></script>
+</body>
+
+</html>

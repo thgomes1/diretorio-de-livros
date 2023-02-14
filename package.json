@@ -1,0 +1,38 @@
+{
+  "name": "diretorio-de-livros",
+  "version": "1.0.0",
+  "description": "Diretório de livros feito por Thiago Gomes. @thgomes_1",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "babel-node src/index.js"
+  },
+  "author": "Thiago Gomes - @thgomes1",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bcryptjs": "^2.4.3",
+    "cheerio": "^1.0.0-rc.12",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "htp-server": "^1.0.2",
+    "jsonwebtoken": "^9.0.0",
+    "localStorage": "^1.0.4",
+    "mongoose": "^6.4.7",
+    "node-fetch": "^3.2.9",
+    "node-url-shortener": "^2.0.3",
+    "path": "^0.12.7",
+    "prettylink": "^1.0.0",
+    "request": "^2.88.2",
+    "server": "^1.0.37",
+    "socket.io": "^4.5.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.18.13",
+    "@babel/node": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "nodemon": "^2.0.19"
+  }
+}
